@@ -1,0 +1,34 @@
+/* Colors */
+.bg-lemon-tonic {
+  background-color: #fcf951;
+}
+.lemon-tonic {
+  color: #fcf951;
+}
+.b--lemon-tonic {
+  border-color: #fcf951;
+}
+.bg-fiery-coral {
+  background-color: #ff4f58;
+}
+.fiery-coral {
+  color: #ff4f58;
+}
+.b--fiery-coral {
+  border-color: #ff4f58;
+}
+.hover-bg-fiery-coral:hover {
+  background-color: #ff4f58;
+}
+
+/* Fonts */
+.ibm-plex-mono {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+/* Utilities */
+.full-bleed {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translate(-50vw);
+}
