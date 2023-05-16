@@ -1,0 +1,22 @@
+/* Colors */
+.bg-baltic-sea {
+  background-color: #7ab7dc;
+}
+.baltic-sea {
+  color: #7ab7dc;
+}
+.b--baltic-sea {
+  border-color: #7ab7dc;
+}
+.bg-white {
+  background-color: #fff;
+}
+.white {
+  color: #fff;
+}
+.b--white {
+  border-color: #fff;
+}
+.hover-bg-white:hover {
+  background-color: #fff;
+}
