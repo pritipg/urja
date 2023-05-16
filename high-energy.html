@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Energy Driven Design</title>
+    <title>Urja</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,6 +23,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script src="./high-energy.js"></script>
+    <!-- Alpine -->
+    <script src="//unpkg.com/alpinejs" defer></script>
   </head>
   <body
     class="bg-lemon-tonic mw8 ml-auto mr-auto pv5 ph4 ibm-plex-mono fiery-coral"
@@ -30,12 +32,10 @@
     <h2 class="ba bw1 b--fiery-coral pa2 tc f3 fw4 mb0">
       Designing websites that adapt to changing energy levels
     </h2>
-    <h1 class="ba bw1 b--fiery-coral pa3 tc f1 fw7 mt3 mb0">
-      Energy Driven Design
-    </h1>
+    <h1 class="ba bw1 b--fiery-coral pa3 tc f1 fw7 mt3 mb0">Urja</h1>
 
     <!-- Introduction-->
-    <div class="flex mt3 pb0">
+    <div class="flex mt3">
       <div class="w-70 ph4 pv2 ba b--fiery-coral b--dashed bw1 mr2">
         <p class="f5 lh-copy">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab iure quo
@@ -72,6 +72,124 @@
     </div>
 
     <!-- P5 Sketch -->
-    <div class="mt3" id="sketch"></div>
+    <div class="mt3 mb0" id="sketch" style="width: 960px; height: 960px"></div>
+
+    <!-- Description -->
+    <div class="flex mt3">
+      <div class="w-50 ph4 pv2 ba b--fiery-coral b--dashed bw1 mr2">
+        <p class="f5 lh-copy">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab iure quo
+          repudiandae ea molestiae necessitatibus dicta corrupti quisquam illum
+          nemo autem numquam enim odio et distinctio, obcaecati nihil delectus
+          atque. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab
+          iure quo repudiandae ea molestiae necessitatibus dicta corrupti
+          quisquam illum nemo autem numquam enim odio et distinctio, obcaecati
+          nihil delectus atque.
+        </p>
+      </div>
+      <div class="w-50 ph4 pv2 ba b--fiery-coral b--dashed bw1">
+        <p class="f5 lh-copy">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab iure quo
+          repudiandae ea molestiae necessitatibus dicta corrupti quisquam illum
+          nemo autem numquam enim odio et distinctio, obcaecati nihil delectus
+          atque. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab
+          iure quo repudiandae ea molestiae necessitatibus dicta corrupti
+          quisquam illum nemo autem numquam enim odio et distinctio, obcaecati
+          nihil delectus atque.
+        </p>
+      </div>
+    </div>
+    <!-- Client-Server Chit Chat -->
+    <div class="flex mt3">
+      <div class="w-30 ph4 pv2 ba b--fiery-coral b--solid bw1 mr2">
+        <p class="f5 lh-copy">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab iure quo
+          repudiandae ea molestiae necessitatibus dicta corrupti quisquam illum
+          nemo autem numquam enim odio et distinctio, obcaecati nihil delectus
+          atque.
+        </p>
+      </div>
+      <div class="w-70 ph4 pv2 ba b--fiery-coral b--dashed bw1">
+        <div class="flex items-center h-100" x-data="app()">
+          <div class="w-third mr2">
+            <div class="flex flex-column">
+              <p class="f5 lh-copy ttu tc fw5 tracked">Server</p>
+              <div
+                @click="server = 3"
+                class="w-100 pa2 ba b--fiery-coral bw1 mb2 pointer ttu tc"
+                :class="server == 3 ? 'black bg-fiery-coral' : '' "
+              >
+                Feeling Good :-)
+              </div>
+              <div
+                @click="server = 2"
+                class="w-100 pa2 ba b--fiery-coral bw1 mb2 pointer ttu tc"
+                :class="server == 2 ? 'black bg-fiery-coral' : '' "
+              >
+                I'm So So :-|
+              </div>
+              <div
+                @click="server = 1"
+                class="w-100 pa2 ba b--fiery-coral bw1 pointer ttu tc"
+                :class="server == 1 ? 'black bg-fiery-coral' : '' "
+              >
+                Going Down :-(
+              </div>
+            </div>
+          </div>
+          <div class="w-third mr2">
+            <p class="f5 lh-copy ttu tc" x-show="page == 3">
+              High Energy <br />
+              Design
+            </p>
+            <p class="f5 lh-copy ttu tc" x-show="page == 2">
+              Medium Energy <br />
+              Design
+            </p>
+            <p class="f5 lh-copy ttu tc" x-show="page == 1">
+              Low Energy <br />
+              Design
+            </p>
+          </div>
+          <div class="w-third">
+            <div class="flex flex-column">
+              <p class="f5 lh-copy ttu tc fw5 tracked">Client</p>
+              <div
+                @click="client = 3"
+                class="w-100 pa2 ba b--fiery-coral bw1 mb2 pointer ttu tc"
+                :class="client == 3 ? 'black bg-fiery-coral' : '' "
+              >
+                Feeling Good :-)
+              </div>
+              <div
+                @click="client = 2"
+                class="w-100 pa2 ba b--fiery-coral bw1 mb2 pointer ttu tc"
+                :class="client == 2 ? 'black bg-fiery-coral' : '' "
+              >
+                I'm So So :-|
+              </div>
+              <div
+                @click="client = 1"
+                class="w-100 pa2 ba b--fiery-coral bw1 pointer ttu tc"
+                :class="client == 1 ? 'black bg-fiery-coral' : '' "
+              >
+                Going Down :-(
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function app() {
+        return {
+          client: 3,
+          server: 3,
+          get page() {
+            return Math.min(this.client, this.server);
+          },
+        };
+      }
+    </script>
   </body>
 </html>

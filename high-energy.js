@@ -3,6 +3,8 @@ let dataC = []; //Array to hold current data
 
 let rawVData;
 let rawCData;
+let systemInfo;
+let serverBattery;
 
 let maxC;
 let maxV;
@@ -14,6 +16,12 @@ function preload() {
   rawCData = loadJSON(
     "https://server.solarpowerforartists.com/api/v2/opendata.php?value=PV-current&duration=7"
   );
+  systemInfo = loadJSON(
+    "https://server.solarpowerforartists.com/api/v2/opendata.php?systemInfo=dump"
+  );
+  serverBattery = loadJSON(
+    "https://server.solarpowerforartists.com/api/v2/opendata.php?value=battery-percentage"
+  );
 }
 
 function setup() {
@@ -23,11 +31,44 @@ function setup() {
   background("#fcf951");
   angleMode(DEGREES);
   //strokeWeight(0.25);
-  noFill();
+  //noFill();
   //frameRate(120);
 
   processVData(rawVData);
   processCData(rawCData);
+
+  textFont("IBM Plex Mono");
+  textSize(16);
+  textAlign(CENTER, CENTER);
+  text(systemInfo.dump.name, width / 2, height / 2);
+  text(
+    systemInfo.dump.location + "," + systemInfo.dump.country,
+    width / 2,
+    height / 2 + 24
+  );
+  text(
+    "Battery:" + parseFloat(serverBattery["battery-percentage"]) * 100 + "%",
+    width / 2,
+    height / 2 + 50
+  );
+
+  textAlign(LEFT);
+  text(rawCData.header.datetime, 30, height - 30);
+  text(rawVData.header.datetime, 162, height - 30);
+
+  fill("#D4295E");
+  noStroke();
+  rectMode(CENTER);
+  rect(18, height - 32, 10, 10);
+
+  fill("#0063B2");
+  rect(150, height - 32, 10, 10);
+
+  fill(0);
+  textAlign(CENTER);
+  textSize(18);
+  textStyle(BOLD);
+  text("Ebb & Flow of Energy on a Solar Powered Server", width / 2, 40);
 }
 
 function draw() {
