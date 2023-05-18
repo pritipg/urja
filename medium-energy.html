@@ -27,13 +27,14 @@
     <div class="flex mt3">
       <div class="w-70 ph4 pv2 ba b--white b--dashed bw1 mr2">
         <p class="f5 lh-copy">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab iure quo
-          repudiandae ea molestiae necessitatibus dicta corrupti quisquam illum
-          nemo autem numquam enim odio et distinctio, obcaecati nihil delectus
-          atque. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab
-          iure quo repudiandae ea molestiae necessitatibus dicta corrupti
-          quisquam illum nemo autem numquam enim odio et distinctio, obcaecati
-          nihil delectus atque.
+          What makes a good website? Ask a designer and they might talk about
+          established principles for building intuitive, aesthetic, accessible
+          sites. Keeping aside individual user experiences, if we a take the
+          whole of the web into account, particularly its global energy
+          consumption, another metric becomes apparent. What is the energy cost
+          of a webpage whizzing past the cables, criss-crossing the planet,
+          going from servers to clients? Ūrjā is a project that considers energy
+          consumption as a parameter for the design of the web.
         </p>
       </div>
       <div class="w-30">
@@ -69,127 +70,40 @@
     <div class="flex mt3">
       <div class="w-50 ph4 pv2 ba b--white b--dashed bw1 mr2">
         <p class="f5 lh-copy">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab iure quo
-          repudiandae ea molestiae necessitatibus dicta corrupti quisquam illum
-          nemo autem numquam enim odio et distinctio, obcaecati nihil delectus
-          atque. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab
-          iure quo repudiandae ea molestiae necessitatibus dicta corrupti
-          quisquam illum nemo autem numquam enim odio et distinctio, obcaecati
-          nihil delectus atque.
+          Solar Protocol a global network of volunteer-run servers powered by
+          solar energy. These servers hold the same information butcommunicate
+          with each other over public APIs to determine which server has the
+          most energy at any moment in time & hence should become the active
+          server. In effect, these servers share their workload, handing off
+          responsibility as they wait to be recharged.
         </p>
       </div>
       <div class="w-50 ph4 pv2 ba b--white b--dashed bw1">
         <p class="f5 lh-copy">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab iure quo
-          repudiandae ea molestiae necessitatibus dicta corrupti quisquam illum
-          nemo autem numquam enim odio et distinctio, obcaecati nihil delectus
-          atque. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab
-          iure quo repudiandae ea molestiae necessitatibus dicta corrupti
-          quisquam illum nemo autem numquam enim odio et distinctio, obcaecati
-          nihil delectus atque.
+          In the visualisation above, I use the Solar Protocol API to fetch the
+          voltage and current data logged by the active server over the past
+          week. The natural cyclical pattern in solar energy becomes apparent by
+          the rise and fall in power over time. This data is fetched in
+          real-time and rendered as an animated graphic in high-energy use
+          designs, shown as a static image in medium-energy, and as an ASCII
+          diagram on the low-energy page.
         </p>
       </div>
     </div>
     <!-- Client-Server Chit Chat -->
     <div class="flex mt3 items-start">
-      <div class="w-30 ph4 pv2 ba b--white b--solid bw1 mr2">
+      <div class="w-40 ph4 pv2 ba b--white b--solid bw1 mr2">
         <p class="f5 lh-copy">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab iure quo
-          repudiandae ea molestiae necessitatibus dicta corrupti quisquam illum
-          nemo autem numquam enim odio et distinctio, obcaecati nihil delectus
-          atque.
+          Imagine that the server-client interaction is akin to a chit-chat
+          between two people. We intuitively gauge our own & our partner's
+          energy levels and adapt the discourse accordingly. Similarly, clients
+          and server must assess each other's energy levels to choose a design
+          appropriate for their capacity.
         </p>
       </div>
-      <div class="w-70 ph4 pv2 ba b--white b--dashed bw1">
+      <div class="w-60 ph4 pv2 ba b--white b--dashed bw1">
         <div class="flex items-center h-100">
           <img src="./medium-energy.jpg" />
         </div>
-        <!-- <div class="flex items-center h-100" x-data="app()">
-          <div class="w-third mr2">
-            <div class="flex flex-column">
-              <p class="f5 lh-copy ttu tc fw5 tracked">Server</p>
-              <div
-                @click="server = 3"
-                class="w-100 pa2 ba b--white bw1 mb2 pointer ttu tc"
-                :class="server == 3 ? 'black bg-white' : '' "
-              >
-                Feeling Good :-)
-                <span> <img src="./eyes-01.svg" /></span>
-              </div>
-              <div
-                @click="server = 2"
-                class="w-100 pa2 ba b--white bw1 mb2 pointer ttu tc"
-                :class="server == 2 ? 'black bg-white' : '' "
-              >
-                I'm So So :-|
-                <span> <img src="./eyes-02.svg" /></span>
-              </div>
-              <div
-                @click="server = 1"
-                class="w-100 pa2 ba b--white bw1 pointer ttu tc"
-                :class="server == 1 ? 'black bg-white' : '' "
-              >
-                Going Down :-(
-                <span> <img src="./eyes-03.svg" /></span>
-              </div>
-            </div>
-          </div>
-          <div class="w-third mr2">
-            <p class="f5 lh-copy ttu tc" x-show="page == 3">
-              High Energy <br />
-              Design
-            </p>
-            <p class="f5 lh-copy ttu tc" x-show="page == 2">
-              Medium Energy <br />
-              Design
-            </p>
-            <p class="f5 lh-copy ttu tc" x-show="page == 1">
-              Low Energy <br />
-              Design
-            </p>
-          </div>
-          <div class="w-third">
-            <div class="flex flex-column">
-              <p class="f5 lh-copy ttu tc fw5 tracked">Client</p>
-              <div
-                @click="client = 3"
-                class="w-100 pa2 ba b--white bw1 mb2 pointer ttu tc"
-                :class="client == 3 ? 'black bg-white' : '' "
-              >
-                Feeling Good :-)
-                <span> <img src="./eyes-01.svg" /></span>
-              </div>
-              <div
-                @click="client = 2"
-                class="w-100 pa2 ba b--white bw1 mb2 pointer ttu tc"
-                :class="client == 2 ? 'black bg-white' : '' "
-              >
-                I'm So So :-|
-                <span> <img src="./eyes-02.svg" /></span>
-              </div>
-              <div
-                @click="client = 1"
-                class="w-100 pa2 ba b--white bw1 pointer ttu tc"
-                :class="client == 1 ? 'black bg-white' : '' "
-              >
-                Going Down :-(
-                <span> <img src="./eyes-03.svg" /></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script>
-      function app() {
-        return {
-          client: 3,
-          server: 3,
-          get page() {
-            return Math.min(this.client, this.server);
-          },
-        };
-      }
-    </script> -->
   </body>
 </html>
