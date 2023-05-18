@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Urja</title>
+    <title>Ūrjā</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,9 +30,9 @@
     class="bg-lemon-tonic mw8 ml-auto mr-auto pv5 ph4 ibm-plex-mono fiery-coral"
   >
     <h2 class="ba bw1 b--fiery-coral pa2 tc f3 fw4 mb0">
-      Designing websites that adapt to changing energy levels
+      Websites that adapt to changing energy levels
     </h2>
-    <h1 class="ba bw1 b--fiery-coral pa3 tc f1 fw7 mt3 mb0">Urja</h1>
+    <h1 class="ba bw1 b--fiery-coral pa3 tc f1 fw7 mt3 mb0">Ūrjā</h1>
 
     <!-- Introduction-->
     <div class="flex mt3">
@@ -116,24 +116,27 @@
               <p class="f5 lh-copy ttu tc fw5 tracked">Server</p>
               <div
                 @click="server = 3"
-                class="w-100 pa2 ba b--fiery-coral bw1 mb2 pointer ttu tc"
+                class="flex items-center justify-between w-100 ph3 pv2 ba b--fiery-coral bw1 mb2 pointer ttu tc"
                 :class="server == 3 ? 'black bg-fiery-coral' : '' "
               >
-                Feeling Good :-)
+                Feeling Good
+                <img src="./eyes-01.svg" class="w2" />
               </div>
               <div
                 @click="server = 2"
-                class="w-100 pa2 ba b--fiery-coral bw1 mb2 pointer ttu tc"
+                class="flex items-center justify-between w-100 ph3 pv2 ba b--fiery-coral bw1 mb2 pointer ttu tc"
                 :class="server == 2 ? 'black bg-fiery-coral' : '' "
               >
-                I'm So So :-|
+                I'm So So
+                <img src="./eyes-02.svg" class="w2" />
               </div>
               <div
                 @click="server = 1"
-                class="w-100 pa2 ba b--fiery-coral bw1 pointer ttu tc"
+                class="flex items-center justify-between w-100 ph3 pv2 ba b--fiery-coral bw1 pointer ttu tc"
                 :class="server == 1 ? 'black bg-fiery-coral' : '' "
               >
-                Going Down :-(
+                Going Down
+                <img src="./eyes-03.svg" class="w2" />
               </div>
             </div>
           </div>
@@ -156,24 +159,27 @@
               <p class="f5 lh-copy ttu tc fw5 tracked">Client</p>
               <div
                 @click="client = 3"
-                class="w-100 pa2 ba b--fiery-coral bw1 mb2 pointer ttu tc"
+                class="flex items-center justify-between w-100 ph3 pv2 ba b--fiery-coral bw1 mb2 pointer ttu tc"
                 :class="client == 3 ? 'black bg-fiery-coral' : '' "
               >
-                Feeling Good :-)
+                Feeling Good
+                <img src="./eyes-01.svg" class="w2" />
               </div>
               <div
                 @click="client = 2"
-                class="w-100 pa2 ba b--fiery-coral bw1 mb2 pointer ttu tc"
+                class="flex items-center justify-between w-100 ph3 pv2 ba b--fiery-coral bw1 mb2 pointer ttu tc"
                 :class="client == 2 ? 'black bg-fiery-coral' : '' "
               >
-                I'm So So :-|
+                I'm So So
+                <img src="./eyes-02.svg" class="w2" />
               </div>
               <div
                 @click="client = 1"
-                class="w-100 pa2 ba b--fiery-coral bw1 pointer ttu tc"
+                class="flex items-center justify-between w-100 ph3 pv2 ba b--fiery-coral bw1 pointer ttu tc"
                 :class="client == 1 ? 'black bg-fiery-coral' : '' "
               >
-                Going Down :-(
+                Going Down
+                <img src="./eyes-03.svg" class="w2" />
               </div>
             </div>
           </div>
